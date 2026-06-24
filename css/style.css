@@ -418,3 +418,9 @@ a {
     height: 0.875rem;
     color: var(--emerald-600);
 }
+
+.view-all {
+    text-align: center;
+    margin-top: 2rem;
+}
+

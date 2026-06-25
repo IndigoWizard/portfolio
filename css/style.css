@@ -424,3 +424,48 @@ a {
     margin-top: 2rem;
 }
 
+
+/* ------ ------ ------  ------ */
+/* ------ CONTACT SECTION ---- */ 
+/* ------ ------ ------ ------ */
+
+.contact {
+    padding: 2.5rem 0;
+}
+
+.contact-container {
+    max-width: 32rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-bottom: 0.75rem;
+}
+
+.contact-container > p {
+    margin-bottom: 1.5rem;
+    color: var(--gray-600);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.4rem;
+}
+
+.social-links a {
+    color: var(--gray-600);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--emerald-600);
+}
+
+.social-links svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+

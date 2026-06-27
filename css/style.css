@@ -103,7 +103,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://i.pinimg.com/1200x/6f/ec/c8/6fecc8983218d33f8c078c2e0bd9ef6f.jpg');
+    background-image: url('/assets/hero-background.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.85;
@@ -489,6 +489,10 @@ footer {
     gap: 0.75rem;
 }
 
+.footer-content a {
+    font-weight: 600;
+}
+
 footer nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -504,3 +508,74 @@ footer nav a {
 footer nav a:hover {
     color: var(--emerald-400);
 }
+
+
+/* ------  ------  ------  ------ */
+/* ------  RESPONSIVE STYLE  ------ */ 
+/* ------  ------  ------  ------  */
+
+@media (max-width: 768px) {
+    .hero-container {
+        margin-bottom: 1rem;
+    }
+    .hero-bg {
+        margin-bottom: -4rem;
+    }
+}
+
+/* ------------------------ */
+/* -------- skills -------- */
+
+@media (max-width: 836px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 570px) {
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* ------------------------ */
+/* -------- projects -------- */
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 570px) {
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+}
+
+
+/* ------------------------ */
+/* -------- contact -------- */
+@media (max-width: 500px) {
+    .contact-content > p {
+        margin-inline: 2rem;
+    }
+}
+
+
+/* ------------------------ */
+/* -------- footer -------- */
+
+@media (max-width: 680px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: center;
+    }
+  }
+
+
+  

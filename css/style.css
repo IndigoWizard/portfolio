@@ -9,6 +9,7 @@
     --white: #ffffff;
     --gray-50: #f9fafb;
     --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
     --gray-300: #d1d5db;
     --gray-600: #4b5563;
     --gray-700: #374151;
@@ -466,6 +467,95 @@ a {
 }
 
 
+/* ------ ------ ------  ------ ------ ------ */
+/* ------ PUBLICATIONS SECTION ------ ------ */ 
+/* ------ ------ ------ ------ ------ ------*/
+
+.publications {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+.publications h2 {
+    text-align: center;
+}
+
+.article-card {
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+    transition: 0.8s;
+}
+
+.article-link {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 0.5rem;
+    transition: 0.4s;
+}
+
+.article-link:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transition: 0.4s;
+}
+
+.publication-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 1.3rem;
+}
+
+.publication-content h3 {
+    margin-bottom: 1rem;
+}
+
+.publication-content p {
+    margin-bottom: 1.5rem;
+}
+
+.readmore {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--emerald-600);
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.article-link:hover .readmore {
+    color: var(--emerald-400);
+    transform: translateX(4px);
+}
+
+.readmore svg {
+    transition: transform 0.2s ease;
+    margin-left: 0.25rem;
+    position: relative;
+    top: 3px;
+}
+
+.article-link:hover .readmore svg {
+    transform: translateX(2px);
+}
+
+.article-thumbnail {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border: 1px solid var(--gray-300);
+    border-radius: 0.5rem;
+    background-image: url('https://miro.medium.com/v2/resize:fit:4800/format:webp/1*c2UsAfWmT5tkrZ_ZD_ehRg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
 /* ------ ------ ------  ------ */
 /* ------ FOOTER ------ ------ */ 
 /* ------ ------ ------ ------ */
@@ -510,9 +600,12 @@ footer nav a:hover {
 }
 
 
-/* ------  ------  ------  ------ */
+/* ------  ------  ------  --------- */
 /* ------  RESPONSIVE STYLE  ------ */ 
 /* ------  ------  ------  ------  */
+
+/* ------------------------ */
+/* -------- herp -------- */
 
 @media (max-width: 768px) {
     .hero-container {
@@ -523,7 +616,7 @@ footer nav a:hover {
     }
 }
 
-/* ------------------------ */
+/* ------------------------- */
 /* -------- skills -------- */
 
 @media (max-width: 836px) {
@@ -538,7 +631,7 @@ footer nav a:hover {
     }
 }
 
-/* ------------------------ */
+/* --------------------------- */
 /* -------- projects -------- */
 
 @media (max-width: 900px) {
@@ -554,8 +647,61 @@ footer nav a:hover {
     }
 }
 
+/* ------------------------------- */
+/* -------- publications -------- */
 
-/* ------------------------ */
+@media (max-width: 880px) {
+    .article-card {
+        transition: 1.8s;
+        padding: 0 3.5rem;
+    }
+    .article-link {
+        grid-template-columns: repeat(1, 1fr);
+        order: -1
+    }
+    .article-thumbnail {
+        order: -1;
+        aspect-ratio: auto;
+        width: 100%;
+    }
+
+
+    .publication-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .publication-content p {
+        font-size: 0.95rem;
+    }
+    
+    .readmore {
+        font-size: 0.95rem;
+    }
+
+}
+
+@media (max-width: 570px) {
+    .article-card {
+        transition: 1.8s;
+        padding: 0 2rem;
+    }
+    .article-link {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    .publication-content h3 {
+        font-size: 1rem;
+    }
+    .article-thumbnail {
+        order: -1;
+        aspect-ratio: 2;
+        width: 100%;
+    }
+
+}
+
+
+/* -------------------------- */
 /* -------- contact -------- */
 @media (max-width: 500px) {
     .contact-content > p {
@@ -564,7 +710,7 @@ footer nav a:hover {
 }
 
 
-/* ------------------------ */
+/* ------------------------- */
 /* -------- footer -------- */
 
 @media (max-width: 680px) {

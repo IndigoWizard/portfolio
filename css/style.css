@@ -135,6 +135,15 @@ a {
 /* hero headers */
 .hero h1 {
     margin-bottom: 0.75rem;
+    font-size: 3rem;
+}
+
+.hero h2 {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0;
+    text-align: unset;
+    color: var(--gray-700);
+    font-size: 1.62rem;
 }
 
 /* hero paragraph */
@@ -573,7 +582,7 @@ a {
 /* ------ ------ ------ ------ */
 
 .contact {
-    padding: 1rem;
+    margin: 2rem;
     height: 40vh;
 }
 
@@ -582,6 +591,15 @@ a {
     margin: 0 auto;
     text-align: center;
 }
+
+.contact-divider {
+    display: block;
+    height: 0.15rem;
+    background-color: var(--gray-300);
+    width: 42%;
+    margin: 2rem auto;
+}
+
 
 .contact-content h2 {
     margin-bottom: 0.75rem;

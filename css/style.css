@@ -43,7 +43,9 @@ h1 {
 h2 {
     font-size: 1.85rem;
     font-weight: 700;
-    margin: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
 }
 
 h3 {
@@ -195,6 +197,14 @@ a {
     margin: 0 auto;
 }
 
+.about-content h2 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+
 .about-content p {
     margin: 0.75rem 1rem;
   }
@@ -228,11 +238,6 @@ a {
 .skills {
     padding: 2.5rem 0;
     position: relative;
-}
-
-.skills h2 {
-    text-align: center;
-    margin: 0 0 1.5rem;
 }
 
 .skills-category {
@@ -295,6 +300,67 @@ a {
     margin-bottom: 0;
 }
 
+/* ------ ------ ------  ------ ------*/
+/* ------ TECH & TOOLS SECTION ------ */ 
+/* ------ ------ ------ ------ ------*/
+
+.techtools {
+    padding: 2.5rem 0;
+    background-color: var(--white);
+    border-bottom: 2px solid var(--gray-100);
+}
+
+.techtools-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.techtools-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.675rem;
+    text-align: center;
+}
+
+.techtools-icons {
+    width: 4.5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* filter: invert(38%) sepia(90%) saturate(200%) hue-rotate(113deg) brightness(90%) contrast(130%);
+    transition: all 0.2s ease-in-out; */
+}
+
+.techtools-icons img {
+    width: 3rem;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.techtools-icons p {
+    text-align: center;
+    font-weight: 600;
+    color: var(--gray-900);
+    filter: none;
+    margin: 0;
+    font-size: 0.875rem; 
+    line-height: 1.25;
+    word-wrap: break-word; 
+}
+
+/* .techtools-icons:hover {
+    color: var(--emerald-600);
+    transform: translateY(-1px);
+    transition: 0.2s;
+    filter: none;
+} */
+
+
 /* ------ ------ ------  ------ */
 /* ------ PROJECTS SECTION ---- */ 
 /* ------ ------ ------ ------ */
@@ -308,10 +374,6 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-}
-
-.projects h2 {
-    text-align: center;
 }
 
 .projects-grid {
@@ -421,52 +483,6 @@ a {
     margin-top: 2rem;
 }
 
-
-/* ------ ------ ------  ------ */
-/* ------ CONTACT SECTION ---- */ 
-/* ------ ------ ------ ------ */
-
-.contact {
-    padding: 2.5rem 0;
-}
-
-.contact-container {
-    max-width: 32rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-content h2 {
-    margin-bottom: 0.75rem;
-}
-
-.contact-container > p {
-    margin-bottom: 1.5rem;
-    color: var(--gray-600);
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.4rem;
-}
-
-.social-links a {
-    color: var(--gray-600);
-    transition: color 0.2s;
-}
-
-.social-links a:hover {
-    color: var(--emerald-600);
-}
-
-.social-links svg {
-    width: 1.6rem;
-    height: 1.6rem;
-}
-
-
 /* ------ ------ ------  ------ ------ ------ */
 /* ------ PUBLICATIONS SECTION ------ ------ */ 
 /* ------ ------ ------ ------ ------ ------*/
@@ -475,10 +491,6 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2.5rem 0;
-}
-
-.publications h2 {
-    text-align: center;
 }
 
 .article-card {
@@ -557,6 +569,52 @@ a {
 
 
 /* ------ ------ ------  ------ */
+/* ------ CONTACT SECTION ---- */ 
+/* ------ ------ ------ ------ */
+
+.contact {
+    padding: 1rem;
+    height: 40vh;
+}
+
+.contact-container {
+    max-width: 33rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-bottom: 0.75rem;
+}
+
+.contact-container > p {
+    margin-bottom: 1.5rem;
+    color: var(--gray-600);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.4rem;
+}
+
+.social-links a {
+    color: var(--gray-600);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--emerald-600);
+}
+
+.social-links svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+
+/* ------ ------ ------  ------ */
 /* ------ FOOTER ------ ------ */ 
 /* ------ ------ ------ ------ */
 
@@ -605,7 +663,7 @@ footer nav a:hover {
 /* ------  ------  ------  ------  */
 
 /* ------------------------ */
-/* -------- herp -------- */
+/* -------- hero -------- */
 
 @media (max-width: 768px) {
     .hero-container {
@@ -615,6 +673,16 @@ footer nav a:hover {
         margin-bottom: -4rem;
     }
 }
+
+/* ------------------------- */
+/* -------- about -------- */
+
+@media (max-width: 799px) {
+    .about-content h2 {
+        margin: 0.75rem 1rem;
+    }
+}
+
 
 /* ------------------------- */
 /* -------- skills -------- */
@@ -661,10 +729,14 @@ footer nav a:hover {
     }
     .article-thumbnail {
         order: -1;
-        aspect-ratio: auto;
+        aspect-ratio: 2;
         width: 100%;
     }
 
+    .publication-content {
+        margin-right: 0;
+    }
+    
 
     .publication-content h3 {
         font-size: 1.1rem;
@@ -722,6 +794,3 @@ footer nav a:hover {
         text-align: center;
     }
   }
-
-
-  

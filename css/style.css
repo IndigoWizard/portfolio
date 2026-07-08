@@ -542,14 +542,18 @@ a {
 .readmore {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--emerald-600);
+    color: var(--gray-50);
     transition: 0.3s;
     display: inline-flex;
     align-items: center;
+    background-color: var(--emerald-600);
+    width: fit-content;
+    padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--emerald-800);
 }
 
 .article-link:hover .readmore {
-    color: var(--emerald-400);
     transform: translateX(4px);
 }
 

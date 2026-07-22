@@ -397,14 +397,15 @@ a {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s, transform 0.3s;
     overflow: hidden;
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .project-card:hover {
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    transform: translateY(-2px) translateX(1px);
+    transform: scale(100.5%);
 }
 
 .project-link {
@@ -472,19 +473,74 @@ a {
     justify-content: space-between;
     padding: 1rem;
     margin-top: auto;
-  }
+}
 
 .project-github, .project-livedemo {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--gray-600);
     margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.3rem;
+    width: 100px;
+    border-radius: 0.375rem;
+}
+
+
+.project-github {
+    background-color: var(--gray-100);
+    color: var(--gray-900);
+    border: 1px solid var(--gray-300);
+    transition: 0.2s ease-in;
+}
+
+.project-card:hover .project-github {
+    background-color: var(--gray-700);
+    color: var(--gray-50);
+    transition: 0.2s ease-out;
+}
+
+
+.project-livedemo {
+    border: 1px solid var(--gray-300);
+    transition: 0.2s ease-in;
+    color: var(--gray-600);
+    padding-left: 0.5rem;
+    width: fit-content;
+    gap: 0.2rem;
+}
+
+.project-card:hover .project-livedemo {
+    background-color: var(--emerald-400);
+    transition: 0.2s ease-out;
+    color: var(--gray-900);
 }
 
 .project-github svg, .project-livedemo svg {
-    width: 0.875rem;
-    height: 0.875rem;
+    width: 1.1rem;
+    height: auto;
+}
+
+.project-github svg {
+    color: var(--gray-900);
+    transition: 0.2s ease-in;
+}
+
+.project-card:hover .project-github > svg {
+    color: white;
+    transition: 0.2s ease-out;
+}
+
+.project-livedemo svg {
     color: var(--emerald-600);
+    transition: 0.2s ease-in;
+}
+
+.project-card:hover .project-livedemo > svg {
+    color: white;
+    transition: 0.2s ease-out;
 }
 
 .view-all {
